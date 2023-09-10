@@ -54,7 +54,8 @@
             android:hint="Digite o seu peso"
             android:inputType="number|numberDecimal"
             android:singleLine="false"
-            android:visibility="visible" />
+            android:visibility="visible"
+            tools:visibility="visible" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -77,23 +78,24 @@
             android:layout_width="328dp"
             android:layout_height="70dp"
             android:hint="Digite a sua altura"
-            android:inputType="number|numberDecimal"
-            android:visibility="visible" />
+            android:inputType="numberDecimal"
+            android:visibility="visible"
+            tools:visibility="visible" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button_calcular_imc"
+        android:id="@+id/btnCalcular"
         android:layout_width="138dp"
         android:layout_height="52dp"
         android:text="Calcular"
-        app:layout_constraintBottom_toTopOf="@+id/button_voltar_calculo"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <Button
-        android:id="@+id/button_voltar_calculo"
+        android:id="@+id/btnVoltarMain"
         android:layout_width="138dp"
         android:layout_height="52dp"
         android:drawableLeft="@drawable/seta_voltar"
@@ -102,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_calcular_imc" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
 
     <TextView
         android:id="@+id/textView"

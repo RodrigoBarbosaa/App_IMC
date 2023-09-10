@@ -19,7 +19,7 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/button_voltar_resultado"
+        android:id="@+id/btnVoltarResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -32,10 +32,10 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/text_resultado_num"
+        android:id="@+id/txtResultadoNum"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
-        android:text="XX.XX"
+        android:text="resultado"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,11 +76,11 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <TextView
-        android:id="@+id/text_resultado_str"
+        android:id="@+id/txtLaudo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Você está com Y"
+        android:text="Laudo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Salvar resultado"
-        app:layout_constraintBottom_toTopOf="@+id/button_voltar_resultado"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarResultado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />

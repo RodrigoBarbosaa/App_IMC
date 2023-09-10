@@ -5,31 +5,35 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.imc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var btn_calcular_imc: Button
-    private lateinit var btn_voltar_calculo: Button
+    private lateinit var binding: ActivityMainBinding
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        btn_calcular_imc = findViewById(R.id.button_calcular_imc)
+        binding.btnCalcular.setOnClickListener { prosseguir() }
 
-        btn_calcular_imc.setOnClickListener {
-
-            val activityReultado = Intent(this, ResultadoActivity::class.java)
-            startActivity(activityReultado)
-
-        }
-
-        btn_voltar_calculo = findViewById(R.id.button_voltar_calculo)
-
-        btn_voltar_calculo.setOnClickListener {
+        binding.btnVoltarMain.setOnClickListener {
             finish()
         }
+    }
+    private fun prosseguir() {
 
+        val peso = binding.editPeso.text.toString()
+        val altura = binding.editAltura.text.toString()
+
+        val intent = Intent(this, ResultadoActivity::class.java)
+
+        intent.putExtra("peso", peso)
+        intent.putExtra("altura", altura)
+
+
+        startActivity(intent)
     }
 }
